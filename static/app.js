@@ -6,7 +6,9 @@ $(function() {
         e.preventDefault();
     });
     $("form").submit(function(e) {
-        render($(this).attr('action'), $(this).serializeArray());
+        kwargs = $(this).serializeArray();
+        log(kwargs);
+        render($(this).attr('action'), kwargs);
         e.preventDefault();
     });
 });
