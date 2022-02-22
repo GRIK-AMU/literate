@@ -6,7 +6,7 @@ $(function() {
         e.preventDefault();
     });
     $("form").submit(function(e) {
-        kwargs = $(this).serializeArray();
+        kwargs = new FormData(e.target);
         console.log(kwargs);
         render($(this).attr('action'), kwargs);
         e.preventDefault();
