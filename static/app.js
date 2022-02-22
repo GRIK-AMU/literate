@@ -5,6 +5,10 @@ $(function() {
         render($(this).attr('href'), {});
         e.preventDefault();
     });
+    $("form").submit(function(e) {
+        render($(this).attr('action'), $(this).serializeArray());
+        e.preventDefault();
+    });
 });
 
 function render(href, kwargs)
