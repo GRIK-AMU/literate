@@ -7,7 +7,7 @@ $(function() {
     });
     $("form").submit(function(e) {
         kwargs = $(this).serializeArray();
-        log(kwargs);
+        console.log(kwargs);
         render($(this).attr('action'), kwargs);
         e.preventDefault();
     });
