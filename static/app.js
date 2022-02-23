@@ -21,10 +21,12 @@ function refresh() {
     });
 }
 
+const start_url = window.location.href;
+
 function render(href, kwargs)
 {
     $.ajax({
-        url: `/views/${href}.html`,
+        url: `${start_url}/views/${href}.html`,
         success: function (data) {
             str = nunjucks.renderString(data, kwargs);
             $("body").html(str);
