@@ -26,7 +26,7 @@ const start_url = window.location.href;
 function render(href, kwargs)
 {
     $.ajax({
-        url: `${start_url}/views/${href}.html`,
+        url: `${start_url}/views/${href}.njk`,
         success: function (data) {
             str = nunjucks.renderString(data, kwargs);
             $("body").html(str);

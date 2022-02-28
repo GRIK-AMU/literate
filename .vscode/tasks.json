@@ -4,10 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "run",
+            "label": "build",
             "type": "shell",
-            "command": "php -S localhost:80",
-            "problemMatcher": []
+            "command": "npx tailwindcss -i ./main.css -o ./static/output.css --watch"
         }
     ]
 }
