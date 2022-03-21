@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  height: 100vh;
+  padding: 2rem;
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+  pointer-events: none;
+}
+
+@layer base {
+  a {
+    @apply bg-lime-700 p-2;
+  }
+  a:hover {
+    @apply bg-lime-500;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+
+  aside {
+    @apply border-2 border-yellow-200 shadow-yellow-100 shadow-md;
+    @apply text-sm text-yellow-300;
+    @apply p-5 float-right max-w-md;
+  }
+}
